@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<style class="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    body {
+        font-family: 'Varela Round', sans-serif
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: auto;
+    }
+
+    .navLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+    .rightLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .home,
+    .about,
+    .contact {
+        margin-right: 5px;
+        padding-right: 15px;
+        border-radius: 10%;
+        border: 2px solid #e63946;
+        background-color: #e63946;
+        color: white;
+    }
+
+
+    .banner {
+        background-image: url(https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+        background-repeat: none;
+        background-size: cover;
+        width: 70%;
+        height: 450px;
+        border-radius: 15px;
+    }
+
+    .bannerItems {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bannerItems>h1 {
+        color: white;
+        padding-top: 70px;
+    }
+
+    .bannerItems>p {
+        color: white;
+        padding-top: 50px;
+    }
+
+    .bannerItems>a {
+        color: white;
+        border: 3px solid white;
+        margin-top: 150px;
+        padding: 10px 15px 10px 15px;
+    }
+
+    .bannerItems>a:hover {
+        color: #e63946;
+        background-color: white;
+        border: 4px solid #e63946;
+    }
+
+    span {
+        color: #e63946;
+    }
+
+    hr {
+        margin: 20px 0 20px 0px;
+        height: 10px;
+        width: 250px;
+        background-color: #e63946;
+        border-radius: 20px;
+    }
+
+    .two_columns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 70%;
+    }
+
+    .first_column {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        border: 3px solid #e63946;
+        border-radius: 20px;
+    }
+
+    .first_column>p {
+        margin-top: 50px;
+        line-height: 2;
+    }
+
+    .first_column>a {
+        margin-top: 50px;
+        padding: 10px 20px 10px 20px;
+        background-color: #e63946;
+        color: white;
+        border-radius: 15px;
+    }
+
+    .first_column>a:hover {
+        background-color: white;
+        color: #e63946;
+        border: 3px solid #e63946;
+    }
+
+    .second_column {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        border: 3px solid #e63946;
+        border-radius: 20px;
+    }
+
+    footer {
+        width: 70%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .footerLinks {
+        background-color: #e63946;
+        border-radius: 20px;
+        display: flex;
+        width: 70%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .info {
+        margin-top: 30px;
+        width: 70%;
+        border-right: 3px solid #e63946;
+    }
+
+    .info>h2 {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 1000px) {
+
+        .banner {
+            width: 100%;
+        }
+
+        .two_columns {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .first_column {
+            width: 100%;
+        }
+
+        .second_column {
+            margin-top: 20px;
+            width: 100%;
+            margin-right: 35px;
+        }
+
+        .second_column>img {
+            width: 80%;
+        }
+    }
+
+
+    @media screen and (max-width: 600px) {
+
+        .banner {
+            width: 100%;
+        }
+
+        .two_columns {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .first_column {
+            width: 100%;
+        }
+
+        .second_column {
+            margin-top: 20px;
+            width: 100%;
+            margin-right: 35px;
+        }
+
+        .second_column>img {
+            width: 80%;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+
+        .banner {
+            width: 100%;
+        }
+
+        .two_columns {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .first_column {
+            width: 80%;
+        }
+
+        .second_column {
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        .second_column>img {
+            width: 80%;
+        }
+    }
+</style>
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="nav">
+            <div class="navLinks">
+                <div class="title">
+                    <h1>ABC</h1>
+                </div>
+
+                <div class="rightLinks">
+                    <a href="" class="home">Home</a>
+                    <a href="" class="about">About</a>
+                    <a href="" class="contact">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div class="bannerItems">
+                <h1 class="banner_text1"> <span>GROW YOUR </span>BUSINESS</h1>
+                <p class="banner_text2">
+                    with our
+                    awesome responive
+                    html email templates
+                    for free.</p>
+
+                <a href="" class="banner_btn">JOIN
+                    US</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="two_columns">
+            <div class="first_column">
+                <h1>
+                    WE CREATE AWESOME EMAIL
+                    <span>TEMPLATES.</span>
+                </h1>
+
+                <hr>
+                <hr>
+
+                <p class="col_p">Lorem ipsum, dolor sit amet
+                    consectetur
+                    adipisicing elit. Aliquid
+                    pariatur repellendus dolor
+                    eveniet dolorum error! Earum, reiciendis officiis! Vel itaque sed ducimus voluptate ad
+                    repudiandae pariatur sit dolores laudantium eum?</p>
+
+                <a href="">Sign
+                    Up</a>
+            </div>
+
+            <div class="second_column">
+                <img class="second_column_image"
+                    src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                    width="50%" height="250px" style="border-radius: 10px;" alt="">
+                <h2>HEADING GOES HERE</h2>
+                <hr>
+                <p class="col_p" style="line-height: 2;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Impedit
+                    expedita at voluptatem saepe
+                    suscipit, cum, quaerat non deleniti aperiam dolor sit vero corrupti hic omnis esse illo minima
+                    aspernatur magnam.</p>
+
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <div class="footerLinks">
+                <a href=""><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" /></a>
+                <a href=""><img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" /></a>
+                <a href=""><img src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png" /></a>
+            </div>
+
+            <div class="info">
+                <h2>CONTACT INFO</h2>
+                <p><span>EMAIL: </span>Me@yahhoo.com</p>
+                <p><span>TELEPHONE: </span>123-456-7890</p>
+                <p><span>ADDRESS: </span>1234 Street Rd City, State, Zipcode</p>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
